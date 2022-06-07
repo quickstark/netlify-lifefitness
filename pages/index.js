@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import ProductListing from '@components/ProductListing';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
+import Head from "next/head";
+import ProductListing from "@components/ProductListing";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
 
 export default function Home({ products }) {
   return (
     <>
       <Head>
-        <title>Cheese and Meat Shop</title>
+        <title>LifeFitness</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -31,7 +31,7 @@ export async function getStaticProps() {
   )
     .then((res) => res.json())
     .then((response) => {
-      console.log('--- built home page ---');
+      console.log("--- built home page ---");
       return response.products.edges;
     });
 
